@@ -1,0 +1,185 @@
+/* === GLOBAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("back.png") no-repeat center/cover;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+/* === TOP BAR === */
+.top-bar {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.top-bar h1 {
+    font-size: 32px;
+    text-shadow: 2px 2px 8px black;
+}
+
+#punkteBox {
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 12px;
+    font-size: 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* === AB 18 WARNUNG === */
+.age-warning {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(255,0,0,0.6);
+    padding: 12px 22px;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+/* === MAIN CONTAINER === */
+.container {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 430px;
+    padding: 25px;
+    background: rgba(255,255,255,0.17);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* === GIF BOX === */
+.gif-box {
+    width: 100%;
+    height: 260px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.gif-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* === BUTTONS === */
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    transform: scale(1.04);
+    filter: brightness(1.15);
+}
+
+.blue { background: #3498db; }
+.purple { background: #9b59b6; }
+.heart { background: #ff3b8d; }
+.folder { background: #ffb100; }
+
+/* === CREATOR INPUT === */
+#creatorInput {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    background: rgba(255,255,255,0.6);
+    font-size: 15px;
+}
+
+/* === POPUP (WENN 0 PUNKTE) === */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.hidden { display: none; }
+
+.popup-content {
+    background: rgba(255,255,255,0.95);
+    padding: 30px 45px;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    font-size: 22px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* === FAVORITEN BUTTONS UNTEN === */
+.fav-buttons {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 330px;
+    display: flex;
+    gap: 15px;
+}
+
+/* === FAVORITEN PANEL === */
+.favorites {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    z-index: 4000;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.favorites h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px pink;
+}
+
+/* GALLERY GRID LIKE SMARTPHONE */
+.fav-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.fav-list img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+}
