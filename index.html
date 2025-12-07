@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Anime GIF Generator 🌸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <div class="age-warning">
+        🔞 <b>AB 18+</b> – Diese Seite enthält NSFW Anime Inhalte
+        </div>
+
+        <div id="ageGate" class="age-overlay">
+    <div class="age-box">
+        <h2>🔞 Bist du 18 oder älter?</h2>
+        <p>Diese Seite enthält Anime +18 Inhalte 😭🔥</p>
+
+        <button id="yesBtn" class="btn yes">Ja, ich bin 18+</button>
+        <button id="noBtn" class="btn no">Nein</button>
+    </div>
+</div>
+
+    <div class="top-bar">
+        <h1>🌸 Anime GIF Generator</h1>
+        <div id="punkteBox">Punkte: 10</div>
+    </div>
+
+    <div class="container">
+        <div class="gif-box">
+            <img id="gifImage" src="" alt="GIF wird geladen...">
+        </div>
+
+        <button class="btn blue" onclick="showGif()">GIF anzeigen (-1 Punkt)</button>
+
+        <input type="text" id="creatorInput" placeholder="Creator Code...">
+        <button class="btn purple" onclick="redeemCode()">Code einlösen</button>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Bro, du hast keine Punkte 🥲🔥</h2>
+            <p>Warte <span id="timer">60</span> Sekunden für +10 Punkte</p>
+        </div>
+    </div>
+
+    <div class="fav-buttons">
+    <button class="btn heart" onclick="saveFavorite()">❤️ Speichern</button>
+    <button class="btn folder" onclick="toggleFavorites()">📁 Meine Favoriten</button>
+</div>
+
+<div id="favoritesPanel" class="favorites hidden">
+    <h2>💖 Meine Lieblings-GIFs</h2>
+    <div id="favList" class="fav-list"></div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
